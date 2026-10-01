@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1win Content Recap</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: '#0A0B0E',
+        panel: '#101218',
+        winblue: '#1479FF',
+        winblue2: '#4DA3FF',
+        mute: '#8A93A6',
+      },
+      fontFamily: {
+        head: ['Sora', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+      },
+    },
+  },
+};
+</script>
+<style>
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body { background: #0A0B0E; overflow-x: hidden; }
+  section[id] { scroll-margin-top: 72px; }
+  ::selection { background: #1479FF; color: #fff; }
+
+  .eyebrow { letter-spacing: .28em; }
+  .tnum { font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
+
+  /* Media tiles */
+  .slot { position: relative; overflow: hidden; background:
+      repeating-linear-gradient(45deg,#101218,#101218 12px,#0d0f14 12px,#0d0f14 24px);
+      border: 1px solid rgba(255,255,255,.08); }
+  .slot video, .slot img { width: 100%; height: 100%; object-fit: cover; display:block; }
+  /* show the full frame in fullscreen instead of the cropped/zoomed cover */
+  video:fullscreen, video:-webkit-full-screen { object-fit: contain !important; width: 100%; height: 100%; }
+
+  /* Scroll reveal */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* Nav active */
+  .navlink { position: relative; }
+  .navlink.active { color: #fff; }
+  .navlink.active::after { width: 100%; }
+  .navlink::after { content:''; position:absolute; left:0; bottom:-4px; height:1px; width:0; background:#1479FF; transition:width .3s ease; }
+
+  @media print { .reveal{opacity:1!important;transform:none!important;} .no-print{display:none;} }
+</style>
+</head>
+<body class="font-body text-white antialiased">
+
+<!-- NAV -->
+<header class="no-print fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-ink/70 border-b border-white/5">
+  <div class="max-w-6xl mx-auto px-6 h-[72px] flex items-center justify-between">
+    <a href="#hero" class="font-head font-extrabold tracking-tight text-sm">
+      <span class="text-winblue">1win</span> <span class="text-mute font-semibold">× Recap</span>
+    </a>
+    <nav class="hidden md:flex gap-8 text-sm text-mute font-medium">
+      <a href="#month-three-content" class="navlink hover:text-white transition">Month three</a>
+      <a href="#month-two" class="navlink hover:text-white transition">Month two</a>
+      <a href="#month-one" class="navlink hover:text-white transition">Month one</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden">
+  <div class="absolute left-0 -top-40 w-[900px] h-[600px] max-w-full pointer-events-none"
+       style="background:radial-gradient(50% 50% at 40% 50%,rgba(20,121,255,.14) 0%,rgba(20,121,255,0) 70%);"></div>
+  <div class="relative z-10 max-w-6xl mx-auto px-6 w-full grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+    <div class="min-w-0">
+      <p class="eyebrow uppercase text-winblue2 text-xs font-semibold mb-5">1win × <a href="https://www.instagram.com/callie.rounds/" target="_blank" rel="noopener" class="underline underline-offset-2 decoration-winblue2/30 hover:decoration-winblue2 transition">@callie.rounds</a></p>
+      <h1 class="font-head font-extrabold leading-[0.95] text-5xl sm:text-6xl md:text-7xl tracking-tight">
+        CONTENT<br><span class="text-winblue">RECAP.</span>
+      </h1>
+      <p class="mt-7 text-base md:text-lg text-mute max-w-xl leading-relaxed">The 1win content from our first three months together has now passed <span class="text-white font-semibold">65 million views</span>.</p>
+    </div>
+    <div class="reveal">
+      <div class="relative rounded-3xl overflow-hidden border border-white/10 aspect-[4/5] shadow-[0_30px_80px_rgba(0,0,0,.55)]">
+        <img id="heroImg" src="assets/hero-month-three.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" style="object-position:50% 40%;">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/35 to-transparent pointer-events-none"></div>
+      </div>
+    </div>
+  </div>
+  <div class="no-print absolute bottom-8 left-1/2 -translate-x-1/2 text-mute text-xs eyebrow uppercase animate-pulse">Scroll ↓</div>
+</section>
+
+<!-- MONTH THREE · THE CONTENT -->
+<section id="month-three-content" class="py-20 md:py-28 border-y border-white/5 bg-panel/40">
+  <div class="max-w-6xl mx-auto px-6">
+    <p class="eyebrow uppercase text-winblue text-xs font-bold mb-6 reveal">Month three · The content</p>
+
+    <div class="reveal" id="m3TotalWrap">
+      <div class="font-head font-extrabold text-5xl sm:text-6xl md:text-7xl text-winblue tnum" id="m3Total"></div>
+      <div class="mt-3 font-head font-semibold text-white text-sm">Month three views</div>
+    </div>
+
+    <p class="mt-10 text-xl md:text-2xl text-white/85 max-w-3xl leading-relaxed reveal" id="m3Intro">This month's Trial reels, which are all still live and collecting views.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14" id="m3Grid"></div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5 mt-14" id="m3TrialGrid"></div>
+  </div>
+</section>
+
+<!-- MONTH TWO -->
+<section id="month-two" class="py-20 md:py-28 border-b border-white/5">
+  <div class="max-w-6xl mx-auto px-6">
+    <p class="eyebrow uppercase text-winblue text-xs font-bold mb-3 reveal">Month two</p>
+    <h2 class="font-head font-extrabold text-3xl md:text-4xl tracking-tight max-w-2xl reveal">Looking back on month two.</h2>
+
+    <div class="mt-10 reveal" id="m2TotalWrap">
+      <div class="font-head font-extrabold text-5xl sm:text-6xl md:text-7xl text-white tnum" id="m2Total"></div>
+      <div class="mt-3 font-head font-semibold text-white text-sm" id="m2TotalLabel"></div>
+    </div>
+
+    <p class="mt-10 text-base md:text-lg text-mute max-w-2xl reveal leading-relaxed">When I sent the month two recap, these videos were at just over 3 million views. They have now passed 4 million, and everything is still live and collecting views.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14" id="m2Grid"></div>
+
+    <h3 class="font-head font-bold text-xl md:text-2xl tracking-tight mt-16 mb-8 reveal">Some of the Trial reels.</h3>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5" id="trialGrid"></div>
+  </div>
+</section>
+
+<!-- MONTH ONE -->
+<section id="month-one" class="py-20 md:py-28">
+  <div class="max-w-6xl mx-auto px-6">
+    <p class="eyebrow uppercase text-winblue text-xs font-bold mb-3 reveal">Month one</p>
+    <h2 class="font-head font-extrabold text-3xl md:text-4xl tracking-tight max-w-2xl reveal">Looking back on month one.</h2>
+
+    <div class="mt-10 reveal" id="m1TotalWrap">
+      <div class="font-head font-extrabold text-5xl sm:text-6xl md:text-7xl text-white tnum" id="m1Total"></div>
+      <div class="mt-3 font-head font-semibold text-white text-sm">Month one views</div>
+    </div>
+
+    <p class="mt-10 text-base md:text-lg text-mute max-w-2xl reveal leading-relaxed">When I sent the first recap, the month one videos were at 17.5 million views. In the meantime they've climbed past 60 million, and everything is still live and accumulating views!</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14" id="m1Grid"></div>
+
+    <h3 class="font-head font-bold text-xl md:text-2xl tracking-tight mt-16 mb-8 reveal">Some of the Trial reels.</h3>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5" id="m1TrialGrid"></div>
+
+    <div class="mt-8 flex flex-wrap items-center justify-between gap-5 rounded-2xl border border-white/10 bg-panel p-7 reveal">
+      <div class="text-sm text-mute"><span class="text-white font-semibold">Download the month one edits.</span> Full-resolution files.<br>Month two and month three full-resolution files are available upon request.</div>
+      <a id="dlBtn" href="#" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl font-head font-semibold text-sm text-white bg-winblue border border-winblue hover:-translate-y-0.5 transition">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        <span>Open the Drive folder</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CLOSE -->
+<footer class="py-24 md:py-36 border-t border-white/5 text-center">
+  <div class="max-w-5xl mx-auto px-6">
+    <p class="font-head font-extrabold text-3xl sm:text-4xl md:text-5xl text-white reveal tracking-tight leading-tight">super excited that this is where we're at after three months together, looking forward to what the future holds :)</p>
+    <p class="text-mute mt-8 text-sm eyebrow uppercase reveal">Content recap · <span class="text-winblue">1win</span> × <a href="https://www.instagram.com/callie.rounds/" target="_blank" rel="noopener" class="text-winblue underline underline-offset-4 decoration-winblue/60 hover:decoration-winblue transition">@callie.rounds</a></p>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   1WIN MONTH THREE RECAP · config. Drop media in assets/, update here.
+   monthTwo: add items as { title, media } (mp4 in assets/ with a
+   matching .jpg poster) or { title, href } for a live reel link.
+   ============================================================ */
+const RECAP = {
+  creator: "@callie.rounds",
+  driveUrl: "https://drive.google.com/drive/folders/1cP4upcnEMuhsQq4zbluOejsTsX2L6WPv?usp=share_link",
+
+  // Month three feed post goes here once it is live, same shape as monthTwo below.
+  monthThree: [],
+  // views = exact play counts, live from Instagram 2026-10-01. Refresh before sending.
+  monthThreeTrials: [
+    { code: "DdqJVtpStny", views: 3641734, cover: "trial-DdqJVtpStny.jpg" },
+    { code: "Ddp-GObKHQi", views: 116659, cover: "trial-Ddp-GObKHQi.jpg" },
+    { code: "Ddoic-UqiMO", views: 411, cover: "trial-Ddoic-UqiMO.jpg" },
+    { code: "DdkzYctBUpa", views: 5725, cover: "trial-DdkzYctBUpa.jpg" },
+    { code: "DdkycW0zc9E", views: 4088, cover: "trial-DdkycW0zc9E.jpg" },
+    { code: "Ddkx0sNBTYs", views: 4288, cover: "trial-Ddkx0sNBTYs.jpg" },
+    { code: "DdfaIC5BTYO", views: 9944, cover: "trial-DdfaIC5BTYO.jpg" },
+    { code: "DdVlTk3qPL-", views: 6923, cover: "trial-DdVlTk3qPL-.jpg" },
+    { code: "DdTWrI5h7eY", views: 3691, cover: "trial-DdTWrI5h7eY.jpg" },
+    { code: "DdTWGm8hvvA", views: 4453, cover: "trial-DdTWGm8hvvA.jpg" },
+    { code: "DdSzgPHKVlJ", views: 717930, cover: "trial-DdSzgPHKVlJ.jpg" },
+  ],
+
+  monthTwo: [
+    { title: "In feed · 2.3M views", media: "feed-DaTXHC6KiKB.jpg", href: "https://www.instagram.com/reel/DaTXHC6KiKB/" },
+  ],
+
+  // views = exact play counts, live from Instagram 2026-10-01. Refresh before sending.
+  monthTwoFeedViews: 2267372,
+  trials: [
+    { code: "DbrvG5IKJcZ", views: 11746, cover: "trial-DbrvG5IKJcZ.jpg" },
+    { code: "DbzVgh0tUo5", views: 480409, cover: "trial-DbzVgh0tUo5.jpg" },
+    { code: "DbzXNYnqzXe", views: 21185, cover: "trial-DbzXNYnqzXe.jpg" },
+    { code: "DbzYW8xq42F", views: 19338, cover: "trial-DbzYW8xq42F.jpg" },
+    { code: "Dbz0XoThIBp", views: 113577, cover: "trial-Dbz0XoThIBp.jpg" },
+    { code: "Db1Pg96hklF", views: 163109, cover: "trial-Db1Pg96hklF.jpg" },
+    { code: "Db9L90Yq8Ou", views: 36067, cover: "trial-Db9L90Yq8Ou.jpg" },
+    { code: "DcAbeT3h0nB", views: 10165, cover: "trial-DcAbeT3h0nB.jpg" },
+    { code: "DcbKh29q_wq", views: 104179, cover: "trial-DcbKh29q_wq.jpg" },
+    { code: "DcbKoouqHW5", views: 376178, cover: "trial-DcbKoouqHW5.jpg" },
+    { code: "DcbK4l2K9eW", views: 77368, cover: "trial-DcbK4l2K9eW.jpg" },
+    { code: "Dcd6bp6KEuh", views: 12099, cover: "trial-Dcd6bp6KEuh.jpg" },
+    { code: "DcimKIFq3vQ", views: 18561, cover: "trial-DcimKIFq3vQ.jpg" },
+    { code: "DcioyCUKXQf", views: 321653, cover: "trial-DcioyCUKXQf.jpg" },
+    { code: "Dcj8Wnvq2B5", views: 25100, cover: "trial-Dcj8Wnvq2B5.jpg" },
+  ],
+
+  monthOne: [
+    { title: "In feed · 8.2M views", views: 8179489, media: "m1feed-DassDgFqgkb.jpg", href: "https://www.instagram.com/reel/DassDgFqgkb/" },
+    { title: "In feed · 1.2M views", views: 1164539, media: "m1feed-DaYielFq3GR.jpg", href: "https://www.instagram.com/reel/DaYielFq3GR/" },
+  ],
+  monthOneTrials: [
+    { code: "Davkfnjqpt9", views: 1640484, cover: "trial-Davkfnjqpt9.jpg" },
+    { code: "DatgbO6qatS", views: 21289341, cover: "trial-DatgbO6qatS.jpg" },
+    { code: "Datd0CCKepc", views: 9297817, cover: "trial-Datd0CCKepc.jpg" },
+    { code: "DatAb7pKSvS", views: 6192101, cover: "trial-DatAb7pKSvS.jpg" },
+    { code: "Das-mKEqAmv", views: 12118694, cover: "trial-Das-mKEqAmv.jpg" },
+    { code: "DarFSVsNdu0", views: 13505, cover: "trial-DarFSVsNdu0.jpg" },
+    { code: "DarA-dZNH-V", views: 22109, cover: "trial-DarA-dZNH-V.jpg" },
+    { code: "DalUvr7qIVM", views: 59731, cover: "trial-DalUvr7qIVM.jpg" },
+    { code: "Dai1JpDPfLY", views: 14260, cover: "trial-Dai1JpDPfLY.jpg" },
+    { code: "Daf4jQIKgQY", views: 41564, cover: "trial-Daf4jQIKgQY.jpg" },
+    { code: "DaXwXyhOjxa", views: 18347, cover: "trial-DaXwXyhOjxa.jpg" },
+    { code: "DaXmtl3M0qp", views: 64727, cover: "trial-DaXmtl3M0qp.jpg" },
+    { code: "DaULa3-qVox", views: 134989, cover: "trial-DaULa3-qVox.jpg" },
+    { code: "DaTjHdBKvSh", views: 69272, cover: "trial-DaTjHdBKvSh.jpg" },
+  ],
+};
+
+const fmtViews = v => v == null ? "views being confirmed"
+  : (v >= 1e6 ? (Math.round(v / 1e5) / 10) + "M views" : (v < 1000 ? v + " views" : Math.round(v / 1e3) + "K views"));
+
+/* ---- tile renderer (click to play, audio on, no overlay text) ---- */
+function tileHTML(item){
+  let media = "";
+  if (item.media) {
+    const isVid = /\.(mp4|mov|webm)$/i.test(item.media);
+    if (isVid) {
+      const poster = item.media.replace(/\.(mp4|mov|webm)$/i, ".jpg");
+      media = `<video src="assets/${item.media}" poster="assets/${poster}" controls playsinline preload="metadata"></video>`;
+    } else {
+      media = `<img src="assets/${item.media}" alt="">`;
+    }
+  }
+  if (item.href) {
+    media = `<a href="${item.href}" target="_blank" rel="noopener">${media}</a>`;
+  }
+  const foot = item.title
+    ? `<div class="mt-3 font-head font-semibold text-sm text-white/90">${item.href ? `<a href="${item.href}" target="_blank" rel="noopener" class="hover:text-winblue2 transition">${item.title}</a>` : item.title}</div>`
+    : "";
+  return `
+    <div class="reveal">
+      <div class="slot aspect-[9/16] rounded-2xl">${media}</div>
+      ${foot}
+    </div>`;
+}
+
+document.getElementById("m3Grid").innerHTML = RECAP.monthThree.map(tileHTML).join("");
+if (!RECAP.monthThree.length) document.getElementById("m3Grid").style.display = "none";
+else document.getElementById("m3Intro").textContent = "This month's feed post, with all of the supplemental Trial reels beneath it. Everything is still live and collecting views.";
+document.getElementById("m3TrialGrid").innerHTML = RECAP.monthThreeTrials.slice().sort((a, b) => b.views - a.views).map(t => `
+    <div class="reveal">
+      <div class="slot aspect-[9/16] rounded-xl"><a href="https://www.instagram.com/reel/${t.code}/" target="_blank" rel="noopener"><img src="assets/${t.cover}" alt=""></a></div>
+      <div class="mt-2 text-sm text-mute">${fmtViews(t.views)}</div>
+    </div>`).join("");
+(function m3Total(){
+  const total = RECAP.monthThree.reduce((s, f) => s + (f.views || 0), 0) + RECAP.monthThreeTrials.reduce((s, t) => s + t.views, 0);
+  document.getElementById("m3Total").innerHTML = `<span class="count" data-to="${Math.floor(total / 5e5) / 2}">0</span>M+`;
+})();
+document.getElementById("m2Grid").innerHTML = RECAP.monthTwo.map(tileHTML).join("");
+document.getElementById("m1Grid").innerHTML = RECAP.monthOne.map(tileHTML).join("");
+
+/* ---- trial reel tiles: cover linked to the reel, views in small letters ---- */
+document.getElementById("trialGrid").innerHTML = RECAP.trials.slice().sort((a, b) => (b.views || 0) - (a.views || 0)).map((t, i) => {
+  const href = `https://www.instagram.com/reel/${t.code}/`;
+  const media = t.cover
+    ? `<a href="${href}" target="_blank" rel="noopener"><img src="assets/${t.cover}" alt=""></a>`
+    : `<a href="${href}" target="_blank" rel="noopener" class="absolute inset-0 flex items-center justify-center text-mute font-head font-semibold text-xs">Trial ${String(i + 1).padStart(2, "0")}</a>`;
+  return `
+    <div class="reveal">
+      <div class="slot aspect-[9/16] rounded-xl">${media}</div>
+      <div class="mt-2 text-sm text-mute">${fmtViews(t.views)}</div>
+    </div>`;
+}).join("");
+
+/* ---- combined month two total: shows once every count is in ---- */
+(function m2Total(){
+  const wrap = document.getElementById("m2TotalWrap");
+  const haveAll = RECAP.monthTwoFeedViews != null && RECAP.trials.every(t => t.views != null);
+  if (!haveAll) { wrap.style.display = "none"; return; }
+  const total = RECAP.monthTwoFeedViews + RECAP.trials.reduce((s, t) => s + t.views, 0);
+  const el = document.getElementById("m2Total");
+  // Callie's display rule: floor to the nearest half million (3M+ until 3.5M+, then 4M+, ...)
+  el.innerHTML = `<span class="count" data-to="${Math.floor(total / 5e5) / 2}">0</span>M+`;
+  document.getElementById("m2TotalLabel").textContent = "Month two views";
+})();
+
+/* ---- month one: trial grid (sorted by views) + total, same rules ---- */
+document.getElementById("m1TrialGrid").innerHTML = RECAP.monthOneTrials.slice().sort((a, b) => (b.views || 0) - (a.views || 0)).map(t => {
+  const href = `https://www.instagram.com/reel/${t.code}/`;
+  const media = `<a href="${href}" target="_blank" rel="noopener"><img src="assets/${t.cover}" alt=""></a>`;
+  return `
+    <div class="reveal">
+      <div class="slot aspect-[9/16] rounded-xl">${media}</div>
+      <div class="mt-2 text-sm text-mute">${fmtViews(t.views)}</div>
+    </div>`;
+}).join("");
+(function m1Total(){
+  const total = RECAP.monthOne.reduce((s, f) => s + (f.views || 0), 0) + RECAP.monthOneTrials.reduce((s, t) => s + (t.views || 0), 0);
+  document.getElementById("m1Total").innerHTML = `<span class="count" data-to="${Math.floor(total / 5e5) / 2}">0</span>M+`;
+})();
+
+/* ---- drive button ---- */
+document.getElementById("dlBtn").href = RECAP.driveUrl;
+
+/* ---- hero image adjuster (open index.html?adjust to use) ---- */
+(function(){
+  var img = document.getElementById('heroImg');
+  if(!img) return;
+  try {
+    var s = JSON.parse(localStorage.getItem('heroAdjM3')||'null');
+    if(s){ img.style.objectPosition = s.x+'% '+s.y+'%'; img.style.transform = 'scale('+(s.z/100)+')'; }
+  } catch(e){}
+  if(location.search.indexOf('adjust') < 0) return;
+
+  var panel = document.createElement('div');
+  panel.className = 'no-print';
+  panel.style.cssText = 'position:fixed;bottom:18px;right:18px;z-index:300;background:#14171c;border:1px solid #2a2f37;border-radius:14px;padding:16px 18px;width:250px;font-family:Inter,sans-serif;color:#e9ebef;box-shadow:0 16px 50px rgba(0,0,0,.6)';
+  function cur(k,d){ try{var s=JSON.parse(localStorage.getItem('heroAdjM3')||'null'); return s&&s[k]!=null?s[k]:d;}catch(e){return d;} }
+  panel.innerHTML =
+    '<div style="font-family:Sora;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#4DA3FF;margin-bottom:12px">Hero image framing</div>'+
+    '<label style="display:block;font-size:11px;color:#8B9096;margin-bottom:12px">Left / right<input id="adjX" type="range" min="0" max="100" value="'+cur('x',50)+'" style="width:100%;accent-color:#1479FF"></label>'+
+    '<label style="display:block;font-size:11px;color:#8B9096;margin-bottom:12px">Up / down<input id="adjY" type="range" min="0" max="100" value="'+cur('y',42)+'" style="width:100%;accent-color:#1479FF"></label>'+
+    '<label style="display:block;font-size:11px;color:#8B9096;margin-bottom:12px">Zoom<input id="adjZ" type="range" min="100" max="220" value="'+cur('z',100)+'" style="width:100%;accent-color:#1479FF"></label>'+
+    '<div id="adjOut" style="font:11px/1.5 monospace;color:#8B9096;margin-top:6px;word-break:break-all"></div>';
+  document.body.appendChild(panel);
+  var x=panel.querySelector('#adjX'), y=panel.querySelector('#adjY'), z=panel.querySelector('#adjZ'), out=panel.querySelector('#adjOut');
+  function apply(){
+    img.style.objectPosition = x.value+'% '+y.value+'%';
+    img.style.transform = 'scale('+(z.value/100)+')';
+    out.textContent = 'object-position: '+x.value+'% '+y.value+'%  scale: '+(z.value/100);
+    localStorage.setItem('heroAdjM3', JSON.stringify({x:x.value,y:y.value,z:z.value}));
+  }
+  [x,y,z].forEach(function(el){ el.addEventListener('input', apply); });
+  apply();
+})();
+
+/* ---- scroll reveal ---- */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+const revealAll = () => document.querySelectorAll('.reveal').forEach(el => {
+  const r = el.getBoundingClientRect();
+  if (r.top < window.innerHeight && r.bottom > 0) el.classList.add('in'); else io.observe(el);
+});
+revealAll();
+window.addEventListener('load', revealAll);
+
+/* ---- gentle count-up ---- */
+const countIO = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target, to = +el.dataset.to; let start = null;
+    const dec = to % 1 !== 0; const dur = 1200;
+    const step = (t) => {
+      if (!start) start = t;
+      const p = Math.min((t - start) / dur, 1);
+      el.textContent = dec ? (p * to).toFixed(1) : Math.floor(p * to).toString();
+      if (p < 1) requestAnimationFrame(step); else el.textContent = dec ? to.toFixed(1) : to;
+    };
+    requestAnimationFrame(step);
+    countIO.unobserve(el);
+  });
+}, { threshold: 0.6 });
+document.querySelectorAll('.count').forEach(el => countIO.observe(el));
+</script>
+
+</body>
+</html>
